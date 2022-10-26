@@ -14,9 +14,7 @@ Date April 11 2022
 public class Gender {
 
     @Id
-    @SequenceGenerator(name ="EmployeeGenderId_Sequence",sequenceName = "ORACLE_DB_SEQ_ID",
-            allocationSize = 2,initialValue = 2023456590)
-    @GeneratedValue(strategy = SEQUENCE ,generator = "EmployeeGenderId_Sequence")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long genderId;
     @NotNull
     private String genderType;

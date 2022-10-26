@@ -13,7 +13,8 @@ public class RoleFactory {
 
 
     public  static Role build(Long roleId, String roleName,String roleDesc) {
-
+        Helper.checkStringPara("employeeId:", roleName);
+        Helper.checkStringPara("salaryId", roleDesc);
         return new Role.Builder()
                 .setRoleId(roleId).setRoleName(roleName).setRoleDesc(roleDesc).build();
     }

@@ -1,9 +1,6 @@
 package za.ac.cput.capstone_Employee_Management.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 import static javax.persistence.GenerationType.SEQUENCE;
@@ -17,9 +14,7 @@ Date April 11 2022
 public class AddressType
 {
     @Id
-    @SequenceGenerator(name ="EmployeeGenderId_Sequence",sequenceName = "ORACLE_DB_SEQ_ID",
-            allocationSize = 2,initialValue = 323456590)
-    @GeneratedValue(strategy = SEQUENCE ,generator = "EmployeeGenderId_Sequence")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long  addressTypeId;
     @NotNull
     private String streetName;

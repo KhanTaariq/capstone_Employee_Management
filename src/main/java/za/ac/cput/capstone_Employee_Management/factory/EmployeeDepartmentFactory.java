@@ -10,8 +10,5 @@ public class EmployeeDepartmentFactory {
                 .build();
     }
 
-    public static EmployeeDepartment createEmployeeDepartment
-            ( Long employeeId, Long deptId) {
-    return createEmployeeDepartment(employeeId, deptId);
-    }
+
 }
